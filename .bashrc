@@ -47,9 +47,9 @@ bind '"\ec": capitalize-word'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 bind '"\C-p": " \C-e\C-u`__fzf_cd__`\e\C-e\er\C-m"'
 export PATH="$PATH:/root/.local/bin"
-export FZF_DEFAULT_COMMAND="fd -t f --hidden . $HOME"
+export FZF_DEFAULT_COMMAND="fd -t f --hidden --no-ignore-vcs . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -t d --hidden . $HOME"
+export FZF_ALT_C_COMMAND="fd -t d --no-ignore-vcs . $HOME"
 export FZF_DEFAULT_OPTS='--height 40% --border'
 
 
